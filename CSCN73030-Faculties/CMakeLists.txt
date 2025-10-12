@@ -14,6 +14,9 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core)
 
 add_executable(CSCN73030-Faculties
   main.cpp
+  report.h report.cpp
+
+  logs.h logs.cpp
 )
 target_link_libraries(CSCN73030-Faculties Qt${QT_VERSION_MAJOR}::Core)
 
