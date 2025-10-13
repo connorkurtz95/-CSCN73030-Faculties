@@ -1,0 +1,245 @@
+\doxysection{Part Class Reference}
+\hypertarget{class_part}{}\label{class_part}\index{Part@{Part}}
+
+
+The \doxylink{class_part}{Part} class.  
+
+
+
+
+{\ttfamily \#include $<$part.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_part_a09385851011125e4f9bbe1c4712f1e1f}{Part}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_part}{Part} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_part_ac1b60549c934c567cd3b04e7e3f8292f}{Part}} (std\+::string part\+Type, std\+::string aquisition\+Date, int part\+ID, std\+::string part\+Description, bool part\+State)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \doxylink{class_part}{Part} class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_part_a939228b433855b25d234def94bcbf426}{Get\+Part\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of the part. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_part_ad658dfaab3b68cb0efe3226dea6ed1d5}{Set\+Part\+Type}} (std\+::string part\+Type)
+\begin{DoxyCompactList}\small\item\em Sets the type of the part. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_part_aac03e8436c24be8710de67ae3a1465c1}{Get\+Aquisition\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Gets the acquisition date of the part. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_part_a64c63cedee0cb0acec9ac1524dfc10f0}{Set\+Aquisition\+Date}} (std\+::string part\+Type)
+\begin{DoxyCompactList}\small\item\em Sets the acquisition date of the part. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_part_af2a76b60261d442490f2c71955da4d28}{Get\+Part\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Gets the unique identifier of the part. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_part_a3900d9e7a3bb6911486f03a805c73e0e}{Set\+Part\+ID}} (int part\+ID)
+\begin{DoxyCompactList}\small\item\em Sets the unique identifier for the part. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_part_a894690dae2362a0b7a9c7b422ce1ee8c}{Get\+Part\+Desc}} ()
+\begin{DoxyCompactList}\small\item\em Gets the description of the part. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_part_a20922c756079838c4a7d9a0199763818}{Set\+Part\+Desc}} (std\+::string part\+Desc)
+\begin{DoxyCompactList}\small\item\em Sets the description for the part. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_part_aa102a416ecd6fec1594ba92583e396bf}{Get\+Part\+State}} ()
+\begin{DoxyCompactList}\small\item\em Gets the operational state of the part. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_part_af1eac0dffcc7d67dc6576deb524b9c9e}{update\+State}} (bool state)
+\begin{DoxyCompactList}\small\item\em Updates the operational state of the part. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_part}{Part} class. 
+
+Represents a component or part in the project database. Stores details such as part type, acquisition date, unique identifier, description, and current operational state. 
+
+\label{doc-constructors}
+\Hypertarget{class_part_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_part_a09385851011125e4f9bbe1c4712f1e1f}\index{Part@{Part}!Part@{Part}}
+\index{Part@{Part}!Part@{Part}}
+\doxysubsubsection{\texorpdfstring{Part()}{Part()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_part_a09385851011125e4f9bbe1c4712f1e1f} 
+Part\+::\+Part (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{class_part}{Part} class. 
+
+Base constructor for the \doxylink{class_part}{Part} class.
+
+Initializes all member variables to default values. \Hypertarget{class_part_ac1b60549c934c567cd3b04e7e3f8292f}\index{Part@{Part}!Part@{Part}}
+\index{Part@{Part}!Part@{Part}}
+\doxysubsubsection{\texorpdfstring{Part()}{Part()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_part_ac1b60549c934c567cd3b04e7e3f8292f} 
+Part\+::\+Part (\begin{DoxyParamCaption}\item[{std\+::string}]{part\+Type}{, }\item[{std\+::string}]{aquisition\+Date}{, }\item[{int}]{part\+ID}{, }\item[{std\+::string}]{part\+Description}{, }\item[{bool}]{part\+State}{}\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor for the \doxylink{class_part}{Part} class. 
+
+\doxylink{class_part_a09385851011125e4f9bbe1c4712f1e1f}{Part\+::\+Part} parameterized contstuctor implementation for the \doxylink{class_part}{Part} class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em part\+Type} & The type or category of the part. \\
+\hline
+{\em aquisition\+Date} & The date when the part was acquired. \\
+\hline
+{\em part\+ID} & The unique identifier for the part. \\
+\hline
+{\em part\+Description} & A textual description of the part.\\
+\hline
+{\em part\+Type} & \\
+\hline
+{\em aquisition\+Date} & \\
+\hline
+{\em part\+ID} & \\
+\hline
+{\em part\+Description} & \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_part_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_part_aac03e8436c24be8710de67ae3a1465c1}\index{Part@{Part}!GetAquisitionDate@{GetAquisitionDate}}
+\index{GetAquisitionDate@{GetAquisitionDate}!Part@{Part}}
+\doxysubsubsection{\texorpdfstring{GetAquisitionDate()}{GetAquisitionDate()}}
+{\footnotesize\ttfamily \label{class_part_aac03e8436c24be8710de67ae3a1465c1} 
+std\+::string Part\+::\+Get\+Aquisition\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the acquisition date of the part. 
+
+\begin{DoxyReturn}{Returns}
+The acquisition date as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_part_a894690dae2362a0b7a9c7b422ce1ee8c}\index{Part@{Part}!GetPartDesc@{GetPartDesc}}
+\index{GetPartDesc@{GetPartDesc}!Part@{Part}}
+\doxysubsubsection{\texorpdfstring{GetPartDesc()}{GetPartDesc()}}
+{\footnotesize\ttfamily \label{class_part_a894690dae2362a0b7a9c7b422ce1ee8c} 
+std\+::string Part\+::\+Get\+Part\+Desc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the description of the part. 
+
+\begin{DoxyReturn}{Returns}
+The part description as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_part_af2a76b60261d442490f2c71955da4d28}\index{Part@{Part}!GetPartID@{GetPartID}}
+\index{GetPartID@{GetPartID}!Part@{Part}}
+\doxysubsubsection{\texorpdfstring{GetPartID()}{GetPartID()}}
+{\footnotesize\ttfamily \label{class_part_af2a76b60261d442490f2c71955da4d28} 
+int Part\+::\+Get\+Part\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the unique identifier of the part. 
+
+\begin{DoxyReturn}{Returns}
+The part ID as an integer. 
+\end{DoxyReturn}
+\Hypertarget{class_part_aa102a416ecd6fec1594ba92583e396bf}\index{Part@{Part}!GetPartState@{GetPartState}}
+\index{GetPartState@{GetPartState}!Part@{Part}}
+\doxysubsubsection{\texorpdfstring{GetPartState()}{GetPartState()}}
+{\footnotesize\ttfamily \label{class_part_aa102a416ecd6fec1594ba92583e396bf} 
+bool Part\+::\+Get\+Part\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the operational state of the part. 
+
+\begin{DoxyReturn}{Returns}
+True if the part is OK, false if it is broken. 
+\end{DoxyReturn}
+\Hypertarget{class_part_a939228b433855b25d234def94bcbf426}\index{Part@{Part}!GetPartType@{GetPartType}}
+\index{GetPartType@{GetPartType}!Part@{Part}}
+\doxysubsubsection{\texorpdfstring{GetPartType()}{GetPartType()}}
+{\footnotesize\ttfamily \label{class_part_a939228b433855b25d234def94bcbf426} 
+std\+::string Part\+::\+Get\+Part\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the type of the part. 
+
+\begin{DoxyReturn}{Returns}
+The part type as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_part_a64c63cedee0cb0acec9ac1524dfc10f0}\index{Part@{Part}!SetAquisitionDate@{SetAquisitionDate}}
+\index{SetAquisitionDate@{SetAquisitionDate}!Part@{Part}}
+\doxysubsubsection{\texorpdfstring{SetAquisitionDate()}{SetAquisitionDate()}}
+{\footnotesize\ttfamily \label{class_part_a64c63cedee0cb0acec9ac1524dfc10f0} 
+void Part\+::\+Set\+Aquisition\+Date (\begin{DoxyParamCaption}\item[{std\+::string}]{part\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the acquisition date of the part. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em part\+Type} & The new acquisition date to assign. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The parameter name should ideally be updated to reflect acquisition date. 
+\end{DoxyNote}
+\Hypertarget{class_part_a20922c756079838c4a7d9a0199763818}\index{Part@{Part}!SetPartDesc@{SetPartDesc}}
+\index{SetPartDesc@{SetPartDesc}!Part@{Part}}
+\doxysubsubsection{\texorpdfstring{SetPartDesc()}{SetPartDesc()}}
+{\footnotesize\ttfamily \label{class_part_a20922c756079838c4a7d9a0199763818} 
+void Part\+::\+Set\+Part\+Desc (\begin{DoxyParamCaption}\item[{std\+::string}]{part\+Desc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the description for the part. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em part\+Desc} & The new description to assign. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_part_a3900d9e7a3bb6911486f03a805c73e0e}\index{Part@{Part}!SetPartID@{SetPartID}}
+\index{SetPartID@{SetPartID}!Part@{Part}}
+\doxysubsubsection{\texorpdfstring{SetPartID()}{SetPartID()}}
+{\footnotesize\ttfamily \label{class_part_a3900d9e7a3bb6911486f03a805c73e0e} 
+void Part\+::\+Set\+Part\+ID (\begin{DoxyParamCaption}\item[{int}]{part\+ID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the unique identifier for the part. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em part\+ID} & The new part ID to assign. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_part_ad658dfaab3b68cb0efe3226dea6ed1d5}\index{Part@{Part}!SetPartType@{SetPartType}}
+\index{SetPartType@{SetPartType}!Part@{Part}}
+\doxysubsubsection{\texorpdfstring{SetPartType()}{SetPartType()}}
+{\footnotesize\ttfamily \label{class_part_ad658dfaab3b68cb0efe3226dea6ed1d5} 
+void Part\+::\+Set\+Part\+Type (\begin{DoxyParamCaption}\item[{std\+::string}]{part\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the type of the part. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em part\+Type} & The new part type to assign. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_part_af1eac0dffcc7d67dc6576deb524b9c9e}\index{Part@{Part}!updateState@{updateState}}
+\index{updateState@{updateState}!Part@{Part}}
+\doxysubsubsection{\texorpdfstring{updateState()}{updateState()}}
+{\footnotesize\ttfamily \label{class_part_af1eac0dffcc7d67dc6576deb524b9c9e} 
+void Part\+::update\+State (\begin{DoxyParamCaption}\item[{bool}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the operational state of the part. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The new state to assign (true = OK, false = broken). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+part.\+h\item 
+part.\+cpp\end{DoxyCompactItemize}
