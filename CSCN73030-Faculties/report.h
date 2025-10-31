@@ -17,6 +17,10 @@ class Report
 
     string description;
 
+    //Date started;
+
+    //Date finished;
+
     bool repairStatus;
 
     int machineID;

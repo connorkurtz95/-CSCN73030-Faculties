@@ -1,19 +1,24 @@
 #include "logs.h"
 
-Logs::Logs()
+Logs::Logs(int id)
 {
-    this->id = 0;
+    this->id = id;
 
     this->numOfReports = 0;
 
     this->repairFinished = 0;
 
     this->repairsUnfinished = 0;
+
+    if (!loadFromDataBase())
+    {
+        //output failed to find database connected to id
+    }
 }
 
-Logs::Logs(Report init)
+Logs::Logs(int id, Report init)
 {
-    this->id = 0;
+    this->id = id;
 
     this->numOfReports = 1;
 
@@ -63,4 +68,16 @@ void Logs::addReport(Report newRep)
         this->repairFinished = 0;
         this->repairsUnfinished = 1;
     }
+}
+
+Logs::~Logs()
+{
+    if (!saveToDataBase())
+    {
+        //output and try again 3 times
+
+        //if still failed output to a error text file?
+    }
+
+    delete[] this->reports;
 }

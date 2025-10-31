@@ -16,12 +16,19 @@ class Logs
 
     Report* reports;
 
-public:
-    Logs();
 
-    Logs(Report init);
+    bool loadFromDataBase();
+
+    bool saveToDataBase();
+
+public:
+    Logs(int id);
+
+    Logs(int id, Report init);
 
     void addReport(Report newRep);
+    \
+    ~Logs();
 };
 
 #endif // LOGS_H

@@ -65,6 +65,8 @@ void Report::setDescription(string decription)
 void Report::setRepairStatus(bool repairStatus)
 {
     this->repairStatus = repairStatus;
+
+    //this->finished.set(finished.current());
 }
 
 void Report::setMachineID(int machineID)
