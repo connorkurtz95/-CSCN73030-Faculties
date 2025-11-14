@@ -109,6 +109,17 @@ Replace `YourExecutableName` with the actual binary name. Example:
   * Requirement from Inventory Management Team: - Stable data formats from collaborating systems - Advance notice of API changes - Access to test data from Facilities/Database teams - Consistent equipment identifiers 
   * Requirement from the Facilities team: - Maintain reliable inventory tracking - tracking and access to parts for the entertainment machines - make orders for parts
 
-### Collab Team 3
+### Transactions
+**Current Configuration:**
+  The transactions team has made and implemented their module for logging and reporting of transactions that occur, however database related features are done with either pseudocode or theoretical. 
 
+* **Impact of Configuration Changes:**
+  CBetween the transaction team and the facilities team, if a configuration is changed on the transaction’s team side that changes modules communicate with each other then that could impact the facilities team. Otherwise, any other configuration changes that the other team makes wouldn’t have a noticeable impact on the overall performance of the facilities team.
+  
+* **Potential Configuration Changes and Impacts:**
+If the facilities team decided to change their operating system, internal software or programming language for whatever reason it wouldn’t affect the transactions team in any meaningful way. Since the modules act relatively independently, there is no worry for requirement changes affecting either team.
+
+* **Requirements and Dependencies:**
+
+  * For the transactions team, their requirements include collecting reports of anyone who would make a transaction, store that information with the database team, and create their own internal reports of transactions. Their additional requirements were to have a functioning budget that cannot be exceeded for the restaurant. The part that overlaps between both teams is that the report generation of the facilities team. This will directly work with the transactions team so they can have accurate records of any transactions that take place.  The facilities team does not have any requirements that need information from the transaction team unless they complete their stretch goal of a restaurant wide budget. In this case the facilities team would need to know the budget amount to not overspend on maintenance tasks.
 ...
