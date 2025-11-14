@@ -93,9 +93,21 @@ Replace `YourExecutableName` with the actual binary name. Example:
   * Requirement from the Database team: a fully functional database API.
   * Requirement from the Facilities team: none.
 
-### Collab Team 2
+### Inventory Management
 
-...
+* **Current Configuration:**
+  The Inventory Management module is in its initial baseline (v1.0) and currently supports: - Ingredient tracking - Stock quantity management - Expiry monitoring - Basic reporting and alerts. Future sprint tasks include integration with Facilities data for spoilage detection and equipment-linked alerts.
+
+* **Impact of Configuration Changes:**
+  Changes to Inventory configuration may impact: - Integration with Facilities - Parsing of shared data formats - Automated reports - Baseline stability
+
+* **Potential Configuration Changes and Impacts:**
+  No changes are anticipated once the API is operational. Consistency in the connection configuration is critical to ensure stable access to the Inventory.
+
+* **Requirements and Dependencies:**
+
+  * Requirement from Inventory Management Team: - Stable data formats from collaborating systems - Advance notice of API changes - Access to test data from Facilities/Database teams - Consistent equipment identifiers 
+  * Requirement from the Facilities team: - Maintain reliable inventory tracking - tracking and access to parts for the entertainment machines - make orders for parts
 
 ### Collab Team 3
 
