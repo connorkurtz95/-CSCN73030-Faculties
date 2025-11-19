@@ -17,6 +17,7 @@ add_executable(CSCN73030-Faculties
   report.h report.cpp
 
   logs.h logs.cpp
+  logsWindow.h logsWindow.cpp logsWindow.ui
 )
 target_link_libraries(CSCN73030-Faculties Qt${QT_VERSION_MAJOR}::Core)
 
