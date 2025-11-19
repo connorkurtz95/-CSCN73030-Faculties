@@ -18,6 +18,10 @@
         <id>1</id>
         <date>2025-11-19</date>
     </log>
+    <log>
+        <id>2</id>
+        <date>2025-11-30</date>
+    </log>
 </logs>
 <reports>
     <report>
@@ -35,6 +39,14 @@
         <part_id>2</part_id>
         <machine_id></machine_id>
         <needs_repair>false</needs_repair>
+    </report>
+    <report>
+        <id>3</id>
+        <report_text>Derusting</report_text>
+        <log_id>2</log_id>
+        <part_id></part_id>
+        <machine_id>1</machine_id>
+        <needs_repair>true</needs_repair>
     </report>
 </reports>
 <parts>
