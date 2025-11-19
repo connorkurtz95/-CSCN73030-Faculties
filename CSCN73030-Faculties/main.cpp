@@ -16,6 +16,5 @@ int main(int argc, char *argv[])
     // to a.exec() or use the Non-Qt Plain C++ Application template.
 
 
-
     return a.exec();
 }

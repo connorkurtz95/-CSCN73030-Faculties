@@ -1,0 +1,67 @@
+\doxysection{part.\+h}
+\hypertarget{part_8h_source}{}\label{part_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PART\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PART\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_part_a09385851011125e4f9bbe1c4712f1e1f}{Part}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ std::string\ partType;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ aquisitionDate;\ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ partID;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ partDescription;\ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ partState;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_part_a09385851011125e4f9bbe1c4712f1e1f}{Part}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_part_a09385851011125e4f9bbe1c4712f1e1f}{Part}}(std::string\ partType,\ std::string\ aquisitionDate,\ \textcolor{keywordtype}{int}\ partID,\ std::string\ partDescription,\ \textcolor{keywordtype}{bool}\ partState);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ std::string\ \mbox{\hyperlink{class_part_a939228b433855b25d234def94bcbf426}{GetPartType}}()\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>partType;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_part_ad658dfaab3b68cb0efe3226dea6ed1d5}{SetPartType}}(std::string\ partType)\{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ this-\/>partType\ =\ partType;}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ std::string\ \mbox{\hyperlink{class_part_aac03e8436c24be8710de67ae3a1465c1}{GetAquisitionDate}}()\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>aquisitionDate;}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_part_a64c63cedee0cb0acec9ac1524dfc10f0}{SetAquisitionDate}}(std::string\ partType)\{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ this-\/>partType\ =\ partType;}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_part_af2a76b60261d442490f2c71955da4d28}{GetPartID}}()\{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>partID;}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_part_a3900d9e7a3bb6911486f03a805c73e0e}{SetPartID}}(\textcolor{keywordtype}{int}\ partID)\{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ this-\/>partID\ =\ partID;}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \ \ \ \ std::string\ \mbox{\hyperlink{class_part_a894690dae2362a0b7a9c7b422ce1ee8c}{GetPartDesc}}()\{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>partDescription;}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_part_a20922c756079838c4a7d9a0199763818}{SetPartDesc}}(std::string\ partDesc)\{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ this-\/>partDescription\ =\ partDesc;}
+\DoxyCodeLine{00101\ \ \ \ \ \}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_part_aa102a416ecd6fec1594ba92583e396bf}{GetPartState}}()\{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>partState;}
+\DoxyCodeLine{00109\ \ \ \ \ \}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_part_af1eac0dffcc7d67dc6576deb524b9c9e}{updateState}}(\textcolor{keywordtype}{bool}\ state)\{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ this-\/>partState\ =\ state;}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PART\_H}}
+
+\end{DoxyCode}
