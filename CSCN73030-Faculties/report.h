@@ -9,6 +9,9 @@
 using namespace std;
 
 
+enum dateTypes{ ID, SUBJECT, MACHINEID, STATUS, DATE };
+
+
 class Report
 {
     int id;
@@ -41,26 +44,34 @@ public:
     Report(string subject, string decription);
 
 
-    void setSubject(string subject);
-
-    void setDescription(string decription);
-
-    void setRepairStatus(bool repairStatus);
-
-    void setMachineID(int machineID);
-
-    void setPartsList(int partIDs);
+    void addPart(int partIDs);
 
 
-    string getSubject(void);
+    void setSubject(string subject) { this->subject = subject; }
 
-    string getDescription(void);
+    void setDescription(string decription) { this->description = decription; }
 
-    bool getRepairStatus(void);
+    void setRepairStatus(bool repairStatus)
+    {
+        this->repairStatus = repairStatus;
 
-    int getMachineID(void);
+        //this->finished.set(finished.current());
+    }
 
-    int getPartsId(int partListPosition);
+    void setMachineID(int machineID) { this->machineID = machineID; }
+
+
+    int getID(void) { return id; }
+
+    string getSubject(void) { return subject; }
+
+    string getDescription(void) { return description; }
+
+    bool getRepairStatus(void) { return repairStatus; }
+
+    int getMachineID(void) { return machineID; }
+
+    int getPartsId(int partListPosition) { return partIDs[partListPosition]; }
 };
 
 #endif // REPORT_H

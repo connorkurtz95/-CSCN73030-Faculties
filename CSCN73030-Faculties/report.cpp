@@ -52,29 +52,8 @@ Report::Report(string subject, string decription)
 }
 
 
-void Report::setSubject(string subject)
-{
-    this->subject = subject;
-}
 
-void Report::setDescription(string decription)
-{
-    this->description = decription;
-}
-
-void Report::setRepairStatus(bool repairStatus)
-{
-    this->repairStatus = repairStatus;
-
-    //this->finished.set(finished.current());
-}
-
-void Report::setMachineID(int machineID)
-{
-    this->machineID = machineID;
-}
-
-void Report::setPartsList(int partID)
+void Report::addPart(int partID)
 {
     // allocate new array with one extra slot
     int* temp = new int[this->numOfParts + 1];
@@ -93,31 +72,5 @@ void Report::setPartsList(int partID)
     // update pointer and count
     this->partIDs = temp;
     this->numOfParts++;
-}
-
-
-string Report::getSubject(void)
-{
-    return this->subject;
-}
-
-string Report::getDescription(void)
-{
-    return this->description;
-}
-
-bool Report::getRepairStatus(void)
-{
-    return this->repairStatus;
-}
-
-int Report::getMachineID(void)
-{
-    return this->machineID;
-}
-
-int Report::getPartsId(int partListPosition)
-{
-    return this->partIDs[partListPosition];
 }
 

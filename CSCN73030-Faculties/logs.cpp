@@ -10,6 +10,7 @@ Logs::Logs(int id)
 
     this->repairsUnfinished = 0;
 
+
     if (!loadFromDataBase())
     {
         //output failed to find database connected to id
@@ -80,4 +81,16 @@ Logs::~Logs()
     }
 
     delete[] this->reports;
+}
+
+
+// private functions
+bool Logs::loadFromDataBase()
+{
+    return true;
+}
+
+bool Logs::saveToDataBase()
+{
+    return true;
 }
