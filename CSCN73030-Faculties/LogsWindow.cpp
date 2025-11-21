@@ -1,6 +1,5 @@
 #include "logsWindow.h"
 #include "ui_logsWindow.h"
-#include "ui_writeReportWindow.h"
 #include "writeReportWindow.h"
 #include <QDate>
 
@@ -17,10 +16,7 @@ LogsWindow::LogsWindow(QWidget *parent)
 
     ui->ReportsTableWidget->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
-    for(int i = 0; i < log.getNumOfReports(); i++)
-    {
-        enterRow(i);
-    }
+    reloadReportsTable();
 }
 
 LogsWindow::~LogsWindow()
@@ -29,16 +25,16 @@ LogsWindow::~LogsWindow()
 }
 
 
-void LogsWindow::enterRow(int row)
+void LogsWindow::fillRow(int row)
 {
     for(int i = 0; i < NUMDATATYPETABLE; i++)
     {
-        enterCell(row, i);
+        fillCell(row, i);
     }
 
 }
-//enum dateTypes{ ID, SUBJECT, MACHINEID, STATUS, DATE };
-void LogsWindow::enterCell(int row, int column)
+
+void LogsWindow::fillCell(int row, int column)
 {
     Report* buf = NULL;
 
@@ -92,7 +88,7 @@ void LogsWindow::enterCell(int row, int column)
 }
 
 
-void LogsWindow::addReport(string subject, string description, int machinID, int* partsID)
+void LogsWindow::addReport(string subject, string description, int machinID)
 {
     Report buf(subject, description);
 
@@ -100,6 +96,41 @@ void LogsWindow::addReport(string subject, string description, int machinID, int
 
     log.addReport(buf);
 }
+
+void  LogsWindow::addTableRow()
+{
+    int newRow = ui->ReportsTableWidget->rowCount();
+
+    ui->ReportsTableWidget->insertRow(newRow);
+}
+
+bool LogsWindow::checkForReports()
+{
+    return numDisplayedReports < log.getNumOfReports();
+}
+
+void LogsWindow::reloadReportsTable()
+{
+    int reportCount = log.getNumOfReports();
+    int currentRows = ui->ReportsTableWidget->rowCount();
+
+    while (currentRows < reportCount) {
+        addTableRow();
+        currentRows++;
+    }
+
+    while (currentRows > reportCount) {
+        ui->ReportsTableWidget->removeRow(currentRows - 1);
+        currentRows--;
+    }
+
+    for (int i = 0; i < reportCount; i++) {
+        fillRow(i);
+    }
+
+    numDisplayedReports = reportCount;
+}
+
 
 
 void LogsWindow::on_createReportBtn_clicked()
@@ -120,5 +151,11 @@ void LogsWindow::on_editReportBtn_clicked()
 void LogsWindow::on_viewReportBtn_clicked()
 {
 
+}
+
+
+void LogsWindow::on_reloadReportsBtn_clicked()
+{
+    reloadReportsTable();
 }
 

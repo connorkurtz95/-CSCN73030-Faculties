@@ -1,6 +1,7 @@
 #ifndef WRITEREPORTWINDOW_H
 #define WRITEREPORTWINDOW_H
 
+#include "logsWindow.h"
 #include <QMainWindow>
 
 namespace Ui {

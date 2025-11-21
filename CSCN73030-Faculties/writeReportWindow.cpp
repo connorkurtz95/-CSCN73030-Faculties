@@ -2,6 +2,7 @@
 #include "logsWindow.h"
 #include "ui_writeReportWindow.h"
 
+
 WriteReportWindow::WriteReportWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::WriteReportWindow)
@@ -23,8 +24,6 @@ void WriteReportWindow::on_closeBtn_clicked()
 
 void WriteReportWindow::on_saveBtn_clicked()
 {
-    //int newRow = ui->tableWidget->rowCount();
-    //ui->tableWidget->insertRow(newRow);
     LogsWindow *parent = qobject_cast<LogsWindow*>(this->parentWidget());
     if (parent) {
 
@@ -34,8 +33,8 @@ void WriteReportWindow::on_saveBtn_clicked()
 
         int machineID = ui->machineIDTextEdit->toPlainText().toInt();
 
-        parent->addReport(subject, description, machineID, 0);
-        parent->addTableRow();
+        parent->addReport(subject, description, machineID);
+        parent->reloadReportsTable();
     }
 
 

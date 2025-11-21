@@ -20,9 +20,13 @@ public:
     explicit LogsWindow(QWidget *parent = nullptr);
     ~LogsWindow();
 
-    void addReport(string subject, string description, int machinID, int* partsID); // not done
+    void addReport(string subject, string description, int machinID); // not done needs , int* partsID implemented
 
     void addTableRow();
+
+    bool checkForReports();
+
+    void reloadReportsTable();
 
 private slots:
     void on_createReportBtn_clicked();
@@ -31,14 +35,19 @@ private slots:
 
     void on_viewReportBtn_clicked();
 
+    void on_reloadReportsBtn_clicked();
+
 private:
+    int numDisplayedReports;
+
+
     Ui::LogsWindow *ui;
 
     Logs log;
 
 
-    void enterRow(int row);
-    void enterCell(int row, int column);
+    void fillRow(int row);
+    void fillCell(int row, int column);
 };
 
 #endif // LOGSWINDOW_H
