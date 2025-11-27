@@ -36,40 +36,48 @@ void LogsWindow::fillRow(int row)
 
 void LogsWindow::fillCell(int row, int column)
 {
-    Report* buf = NULL;
-
     bool flag;
     QString result;
+    QString buf;
 
-
-    buf = log.getReports();
+    int Id = 0;
+    string Subject;
+    int MachineId = 0;
 
     switch (column)
     {
     case ID:
+        Id = log.getReport(row).getID();
 
-        ui->ReportsTableWidget->item(row, column)->setText(QString::number(buf[row].getID()));
+        buf = buf.number(Id);
+
+        ui->ReportsTableWidget->item(row, column)->setText(buf);
 
         break;
 
 
     case SUBJECT:
+        Subject = log.getReport(row).getSubject();
 
-        ui->ReportsTableWidget->item(row, column)->setText(QString::fromStdString(buf[row].getSubject()));
+        buf.fromStdString(Subject);
+
+        ui->ReportsTableWidget->item(row, column)->setText(buf);
 
         break;
 
 
     case MACHINEID:
+        MachineId = log.getReport(row).getMachineID();
 
-        ui->ReportsTableWidget->item(row, column)->setText(QString::number(buf[row].getMachineID()));
+        buf.number(MachineId);
+
+        ui->ReportsTableWidget->item(row, column)->setText(buf);
 
         break;
 
 
     case STATUS:
-
-        flag = buf[row].getRepairStatus();
+        flag = log.getReport(row).getRepairStatus();
         result = flag ? "true" : "false";
 
         ui->ReportsTableWidget->item(row, column)->setText(result);

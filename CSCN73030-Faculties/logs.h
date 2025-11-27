@@ -40,11 +40,10 @@ public:
 
     int getRepairsUnfinished() const { return repairsUnfinished; }
 
-    // For pointer types, return as const pointer if you don’t intend modification
-    const Report* getReports() const { return reports; }
-
-    // If you want to allow modification of the Report object:
     Report* getReports() { return reports; }
+
+
+    Report getReport(int reportNum) { return reports[reportNum]; }
 
 };
 

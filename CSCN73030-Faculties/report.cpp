@@ -1,11 +1,11 @@
-#include <iostream>
 #include "report.h"
 
 Report::Report()
 {
     this->numOfParts = 0;
-}
 
+    this->id = 0;
+}
 
 Report::Report(int id, string subject, string decription, int *partIDs, int numOfParts)
 {
@@ -24,6 +24,8 @@ Report::Report(int id, string subject, string decription, int *partIDs, int numO
 
 Report::Report(int id, string subject, string decription)
 {
+    this->numOfParts = 0;
+
     this->subject = subject;
 
     this->id = id;
@@ -33,6 +35,10 @@ Report::Report(int id, string subject, string decription)
 
 Report::Report(string subject, string decription, int *partIDs, int numOfParts)
 {
+    this->numOfParts = 0;
+
+    this->id = 0;
+
     this->subject = subject;
 
     this->description = decription;
@@ -46,11 +52,23 @@ Report::Report(string subject, string decription, int *partIDs, int numOfParts)
 
 Report::Report(string subject, string decription)
 {
+    this->numOfParts = 0;
+
+    this->id = 0;
+
     this->subject = subject;
 
     this->description = decription;
 }
 
+
+Report::~Report()
+{
+    if(numOfParts > 0)
+    {
+        delete[] partIDs;
+    }
+}
 
 
 void Report::addPart(int partID)

@@ -46,20 +46,23 @@ void Logs::addReport(Report newRep)
 
     // copy old elements if any
     if (this->numOfReports > 0) {
-        memcpy(temp, this->reports, this->numOfReports * sizeof(int));
+        memcpy((void*)temp, this->reports, this->numOfReports * sizeof(int));
     }
 
     // add the new part at the end
     temp[this->numOfReports] = newRep;
 
-    // free old memory
-    delete[] this->reports;
+    if (this->numOfReports > 0)
+    {
+        // free old memory
+        delete[] this->reports;
+    }
 
     // update pointer and count
     this->reports = temp;
     this->numOfReports++;
 
-    if(newRep.getRepairStatus())
+    if (newRep.getRepairStatus())
     {
         this->repairFinished = 1;
         this->repairsUnfinished = 0;

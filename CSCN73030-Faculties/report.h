@@ -44,6 +44,9 @@ public:
     Report(string subject, string decription);
 
 
+    ~Report();
+
+
     void addPart(int partIDs);
 
 
@@ -73,5 +76,8 @@ public:
 
     int getPartsId(int partListPosition) { return partIDs[partListPosition]; }
 };
+
+
+//typedef report* Report;
 
 #endif // REPORT_H
