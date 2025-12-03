@@ -27,7 +27,7 @@ public:
 
     Logs(int id, Report init);
 
-    void addReport(Report newRep);
+    void addReport(Report& newRep);
 
     ~Logs();
 

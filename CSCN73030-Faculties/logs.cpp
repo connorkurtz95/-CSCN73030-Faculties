@@ -39,36 +39,32 @@ Logs::Logs(int id, Report init)
     this->reports[this->numOfReports - 1] = init;
 }
 
-void Logs::addReport(Report newRep)
+void Logs::addReport(Report& newRep)
 {
     // allocate new array with one extra slot
     Report* temp = new Report[this->numOfReports + 1];
 
     // copy old elements if any
-    if (this->numOfReports > 0) {
-        memcpy((void*)temp, this->reports, this->numOfReports * sizeof(int));
+    for (int i = 0; i < this->numOfReports; ++i) {
+        temp[i] = this->reports[i];  // invokes copy assignment
     }
 
-    // add the new part at the end
-    temp[this->numOfReports] = newRep;
+    // add the new report at the end
+    temp[this->numOfReports] = newRep;  // copy assignment
 
+    // free old memory
     if (this->numOfReports > 0)
-    {
-        // free old memory
         delete[] this->reports;
-    }
 
     // update pointer and count
     this->reports = temp;
     this->numOfReports++;
 
-    if (newRep.getRepairStatus())
-    {
+    // update status flags
+    if (newRep.getRepairStatus()) {
         this->repairFinished = 1;
         this->repairsUnfinished = 0;
-    }
-    else
-    {
+    } else {
         this->repairFinished = 0;
         this->repairsUnfinished = 1;
     }

@@ -35,13 +35,18 @@ class Report
 public:
     Report();
 
-    Report(int id, string subject, string decription, int *partIDs, const int numOfParts);
+    Report(int id, string subject, string decription, int *partIDs, const int numOfParts, int machineId);
 
-    Report(int id, string subject, string decription);
+    Report(int id, string subject, string decription, int machineId);
 
-    Report(string subject, string decription, int *partIDs, const int numOfParts);
+    Report(string subject, string decription, int *partIDs, const int numOfParts, int machineId);
 
-    Report(string subject, string decription);
+    Report(string subject, string decription, int machineId);
+
+    Report(const Report& other);
+
+
+    Report& operator=(Report &other);
 
 
     ~Report();

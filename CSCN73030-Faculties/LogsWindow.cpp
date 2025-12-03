@@ -39,6 +39,7 @@ void LogsWindow::fillCell(int row, int column)
     bool flag;
     QString result;
     QString buf;
+    QTableWidgetItem *item;
 
     int Id = 0;
     string Subject;
@@ -51,37 +52,61 @@ void LogsWindow::fillCell(int row, int column)
 
         buf = buf.number(Id);
 
-        ui->ReportsTableWidget->item(row, column)->setText(buf);
+        item = ui->ReportsTableWidget->item(row, column);
+        if (!item)
+        {
+            item = new QTableWidgetItem();
+            ui->ReportsTableWidget->setItem(row, column, item);
+        }
 
+        item->setText(buf);
         break;
 
 
     case SUBJECT:
         Subject = log.getReport(row).getSubject();
 
-        buf.fromStdString(Subject);
+        buf = buf.fromStdString(Subject);
 
-        ui->ReportsTableWidget->item(row, column)->setText(buf);
+        item = ui->ReportsTableWidget->item(row, column);
+        if (!item)
+        {
+            item = new QTableWidgetItem();
+            ui->ReportsTableWidget->setItem(row, column, item);
+        }
 
+        item->setText(buf);
         break;
 
 
     case MACHINEID:
         MachineId = log.getReport(row).getMachineID();
 
-        buf.number(MachineId);
+        buf = buf.number(MachineId);
 
-        ui->ReportsTableWidget->item(row, column)->setText(buf);
+        item = ui->ReportsTableWidget->item(row, column);
+        if (!item)
+        {
+            item = new QTableWidgetItem();
+            ui->ReportsTableWidget->setItem(row, column, item);
+        }
 
+        item->setText(buf);
         break;
 
 
     case STATUS:
         flag = log.getReport(row).getRepairStatus();
-        result = flag ? "true" : "false";
+        result = flag ? "In Progress" : "Completed";
 
-        ui->ReportsTableWidget->item(row, column)->setText(result);
+        item = ui->ReportsTableWidget->item(row, column);
+        if (!item)
+        {
+            item = new QTableWidgetItem();
+            ui->ReportsTableWidget->setItem(row, column, item);
+        }
 
+        item->setText(result);
         break;
 
 
@@ -98,9 +123,7 @@ void LogsWindow::fillCell(int row, int column)
 
 void LogsWindow::addReport(string subject, string description, int machinID)
 {
-    Report buf(subject, description);
-
-    buf.setMachineID(machinID);
+    Report buf(log.getNumOfReports(), subject, description, machinID);
 
     log.addReport(buf);
 }
@@ -122,17 +145,20 @@ void LogsWindow::reloadReportsTable()
     int reportCount = log.getNumOfReports();
     int currentRows = ui->ReportsTableWidget->rowCount();
 
-    while (currentRows < reportCount) {
+    while (currentRows < reportCount)
+    {
         addTableRow();
         currentRows++;
     }
 
-    while (currentRows > reportCount) {
+    while (currentRows > reportCount)
+    {
         ui->ReportsTableWidget->removeRow(currentRows - 1);
         currentRows--;
     }
 
-    for (int i = 0; i < reportCount; i++) {
+    for (int i = 0; i < reportCount; i++)
+    {
         fillRow(i);
     }
 
