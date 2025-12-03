@@ -1,0 +1,74 @@
+{
+  "profiles": [
+      {
+        "username": "Connor",
+        "password": "password"
+      },
+      {
+        "username": "Grae",
+        "password": "password"
+      },
+      {
+        "username": "Rhys",
+        "password": "password"
+      }
+    ],
+  "logs": [
+    {
+      "id": 1,
+      "date": "2025-11-19"
+    },
+    {
+      "id": 2,
+      "date": "2025-11-30"
+    }
+  ],
+  "reports": [
+    {
+      "id": 1,
+      "report_text": "Needs derusting",
+      "log_id": 1,
+      "part_id": 1,
+      "machine_id": null,
+      "needs_repair": true
+    },
+    {
+      "id": 2,
+      "report_text": "Cleaned",
+      "log_id": 1,
+      "part_id": null,
+      "machine_id": 2,
+      "needs_repair": false
+    },
+    {
+      "id": 3,
+      "report_text": "Derusting",
+      "log_id": 2,
+      "part_id": null,
+      "machine_id": 1,
+      "needs_repair": false
+    }
+  ],
+  "parts": [
+    {
+      "id": 1,
+      "name": "Left Arm",
+      "machine_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Right Arm",
+      "machine_id": 1
+    }
+  ],
+  "machines": [
+    {
+      "id": 1,
+      "name": "Machine One"
+    },
+    {
+      "id": 2,
+      "name": "Machine Two"
+    }
+  ]
+}
