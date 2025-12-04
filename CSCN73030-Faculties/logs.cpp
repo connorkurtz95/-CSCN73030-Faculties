@@ -79,7 +79,10 @@ Logs::~Logs()
         //if still failed output to a error text file?
     }
 
-    delete[] this->reports;
+    if(numOfReports > 0)
+    {
+        delete[] this->reports;
+    }
 }
 
 

@@ -120,9 +120,12 @@ Report& Report::operator=(Report& other)
 
 Report::~Report()
 {
-    if(numOfParts > 0)
+    if(numOfParts != NULL)
     {
-        delete[] partIDs;
+        if(numOfParts > 0)
+        {
+            delete[] partIDs;
+        }
     }
 }
 
