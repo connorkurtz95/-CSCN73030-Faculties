@@ -20,6 +20,11 @@ add_executable(CSCN73030-Faculties
   calendar.h
   calendar.cpp
   calendarwidget.h calendarwidget.cpp
+    report.h report.cpp
+
+    logs.h logs.cpp
+    logsWindow.h logsWindow.cpp logsWindow.ui
+    writeReportWindow.h writeReportWindow.cpp writeReportWindow.ui
 )
 target_link_libraries(CSCN73030-Faculties
     PRIVATE

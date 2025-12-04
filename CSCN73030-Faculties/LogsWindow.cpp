@@ -1,7 +1,9 @@
 #include "logsWindow.h"
 #include "ui_logsWindow.h"
 #include "writeReportWindow.h"
+#include "calendarwidget.h"
 #include <QDate>
+#include <QPushButton>
 
 
 LogsWindow::LogsWindow(QWidget *parent)
@@ -9,6 +11,12 @@ LogsWindow::LogsWindow(QWidget *parent)
     , ui(new Ui::LogsWindow), log(QDate::currentDate().year())
 {   
     ui->setupUi(this);
+    // Connect openCalendarBtn if it exists (safety in case UI naming differs)
+    {
+        QPushButton *btn = this->findChild<QPushButton *>("openCalendarBtn");
+        if (btn) connect(btn, &QPushButton::clicked, this, &LogsWindow::on_openCalendarBtn_clicked);
+    }
+
 
     ui->ReportsTableWidget->setDragDropMode(QAbstractItemView::NoDragDrop);
     ui->ReportsTableWidget->setDragEnabled(false);
@@ -193,3 +201,15 @@ void LogsWindow::on_reloadReportsBtn_clicked()
     reloadReportsTable();
 }
 
+
+
+void LogsWindow::on_openCalendarBtn_clicked()
+{
+    // Create calendar as a top-level window (no parent) so it remains after closing LogsWindow
+    CalendarWidget *cw = new CalendarWidget(nullptr);
+    cw->setAttribute(Qt::WA_DeleteOnClose);
+    cw->show();
+
+    // Close the logs window
+    this->close();
+}

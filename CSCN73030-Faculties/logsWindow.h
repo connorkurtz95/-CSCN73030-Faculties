@@ -37,6 +37,9 @@ private slots:
 
     void on_reloadReportsBtn_clicked();
 
+private slots:
+    void on_openCalendarBtn_clicked();
+
 private:
     int numDisplayedReports;
 
